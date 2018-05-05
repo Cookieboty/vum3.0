@@ -1,4 +1,4 @@
-import ToastComponent from './toast'
+import ToastComponent from './src'
 
 let instance
 let defaults = {
@@ -17,11 +17,14 @@ export default {
       })
       document.body.appendChild(instance.$el)
     }
-    let toast = (options) => {
-      options = Object.assign(defaults, options)
-      for (let prop in options) {
+    let toast = (option) => {
+      let options = Object.assign(defaults, option)
+      // for (let prop of Object.keys(options)) {
+      // instance[prop] = options[prop]
+      // }
+      Object.getOwnPropertyNames(options).forEach(prop => {
         instance[prop] = options[prop]
-      }
+      })
     }
     if (!Vue.$toast) {
       Vue.$toast = toast

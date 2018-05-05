@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import Overlay from '../overlay'
+import Overlay from '../../overlay'
 export default {
   components: {
     Overlay
