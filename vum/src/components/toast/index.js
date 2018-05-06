@@ -4,7 +4,7 @@ let instance
 let defaults = {
   message: '',
   type: 'success',
-  value: true,
+  showValue: true,
   duration: 3000
 }
 

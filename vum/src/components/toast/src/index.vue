@@ -55,8 +55,7 @@ export default {
       if (val) {
         setTimeout(() => {
           this.showValue = false
-          this.value = false
-          // this.$emit('input', val)
+          this.$emit('input', val)
         }, this.duration)
       }
     }
