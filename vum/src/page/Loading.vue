@@ -7,7 +7,6 @@
         <p><m-button @click.native="showPreloader()">Show Preloader</m-button></p>
       </div>
     </Contented>
-    <preloader :show="show"></preloader>
   </div>
 </template>
 
@@ -15,13 +14,11 @@
 import { SimpleHeader } from '../components/header/index'
 import Contented from '../components/content'
 import { Button } from '../components/buttons'
-import Preloader from '../components/preloader'
 
 export default {
   components: {
     SimpleHeader,
     Contented,
-    Preloader,
     'm-button': Button
   },
   data () {
@@ -31,11 +28,9 @@ export default {
   },
   methods: {
     showPreloader () {
-      this.show = true
-      let self = this
-      clearTimeout(this.timeout)
-      this.timeout = setTimeout(function () {
-        self.show = false
+      this.$loading()
+      setTimeout(() => {
+        this.$loading.close()
       }, 3000)
     }
   }

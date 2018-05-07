@@ -122,13 +122,13 @@
               </p>
             </a>
           </router-link>
-          <router-link :to="{ path: 'preloader'}">
+          <router-link :to="{ path: 'loading'}">
             <a class="grid">
               <div class="grid_icon">
                 <img src="../assets/images/home/preloader.png" alt="">
               </div>
               <p class="grid_label">
-                Preloader
+                Loading
               </p>
             </a>
           </router-link>

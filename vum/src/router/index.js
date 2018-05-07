@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Index from '@/page/Index'
 import Popup from '@/page/Popup'
-import Preloader from '@/page/Preloader'
+import Loading from '@/page/Loading'
 
 Vue.use(Router)
 
@@ -14,14 +14,14 @@ export default new Router({
       component: Index
     },
     {
-      path: '/Popup',
+      path: '/popup',
       name: 'Popup',
       component: Popup
     },
     {
-      path: '/Preloader',
-      name: 'Preloader',
-      component: Preloader
+      path: '/loading',
+      name: 'Loading',
+      component: Loading
     }
   ]
 })
