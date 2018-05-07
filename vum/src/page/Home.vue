@@ -111,6 +111,28 @@
         </router-link>
       </div>-->
       <h2 class="demos-title">Components</h2>
+        <div class="grids grids-small">
+          <router-link :to="{ path: 'popup'}">
+            <a class="grid">
+              <div class="grid_icon">
+                <img src="../assets/images/home/window.png" alt="">
+              </div>
+              <p class="grid_label">
+                Popup
+              </p>
+            </a>
+          </router-link>
+          <router-link :to="{ path: 'preloader'}">
+            <a class="grid">
+              <div class="grid_icon">
+                <img src="../assets/images/home/preloader.png" alt="">
+              </div>
+              <p class="grid_label">
+                Preloader
+              </p>
+            </a>
+          </router-link>
+        </div>
       <!--<div class="grids grids-small">
         <router-link :to="{ path: 'modal'}">
           <a class="grid">
@@ -197,7 +219,6 @@
   </div>
 </template>
 <script>
-import Grid from '../components/grid'
 import { Header, HeaderLink, HeaderTitle } from '../components/header/index'
 import Contented from '../components/content'
 
@@ -206,8 +227,7 @@ export default {
     'page-header': Header,
     HeaderLink,
     HeaderTitle,
-    Contented,
-    Grid
+    Contented
   }
 }
 </script>
